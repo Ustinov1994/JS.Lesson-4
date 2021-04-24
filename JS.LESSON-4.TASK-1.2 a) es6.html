@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS.LESSON-4.TASK-1.2 a) ES6 </title>
+</head>
+
+<body>
+<script>
+    'use strict';
+
+    class Post {
+        constructor(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        edit(text) {
+            this.text = text;
+        }
+    }
+
+    let post = new Post("edgar allan poe", "DOM", "2001");
+    post.edit("Master of Macabre");
+    console.log(post);
+</script>
+</body>
+
+</html>

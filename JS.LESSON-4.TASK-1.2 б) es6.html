@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS.LESSON-4.TASK-1.2 б) ES6 </title>
+</head>
+
+<body>
+<script>
+    'use strict';
+
+    class Post {
+        constructor(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        edit(text) {
+            this.text = text;
+        }
+    }
+
+    class AttachedPost extends Post {
+        constructor(author, text, date,highlighted=false) {
+            super(author, text, date);
+            this.highlighted=highlighted;
+        }
+        makeTextHighlighted() {
+            this.highlighted=true;
+
+        }
+    }
+
+    let post = new Post("edgar allan poe", "DOM", "2001" );
+    let attachedPost = new AttachedPost("edgar allan poe", "DOM", "2001" );
+    post.edit("Master of Macabre");
+    attachedPost.makeTextHighlighted();
+    console.log(post);
+    console.log(attachedPost);
+</script>
+</body>
+
+</html>
