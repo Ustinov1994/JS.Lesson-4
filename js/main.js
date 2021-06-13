@@ -8,7 +8,7 @@ const products = [
 //Добавить в выводе изображение
 const renderProduct = (product, img = 'https://via.placeholder.com/200x200') => {
     return `<div class="product-item">
-                <img src='${img}'>
+                <img src='${img}' alt='${product.title}'>
                 <h3>${product.title}</h3>
                 <p>${product.price}</p>
                 <button class="buy-btn">Купить</button>
